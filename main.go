@@ -18,7 +18,7 @@ func onReady() {
 }
 
 func onExit() {
-
+	// Cleaning stuff here.
 }
 
 func getIcon(s string) []byte {
