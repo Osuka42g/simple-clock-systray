@@ -14,4 +14,4 @@ go build
 ./simple-clock-systray
 ```
 
-🍻%
+🍻
