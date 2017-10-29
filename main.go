@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"strconv"
 	"time"
 
 	"github.com/getlantern/systray"
@@ -67,14 +66,7 @@ func getClockTime(tz string) string {
 	t := time.Now()
 	utc, _ := time.LoadLocation(tz)
 
-	hour, min, sec := t.In(utc).Clock()
-	return ItoaTwoDigits(hour) + ":" + ItoaTwoDigits(min) + ":" + ItoaTwoDigits(sec)
-}
-
-// ItoaTwoDigits time.Clock returns one digit on values, so we make sure to convert to two digits
-func ItoaTwoDigits(i int) string {
-	b := "0" + strconv.Itoa(i)
-	return b[len(b)-2:]
+	return t.In(utc).Format("15:04:05")
 }
 
 func getIcon(s string) []byte {
