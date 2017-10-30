@@ -7,6 +7,12 @@ Configurable timezones.
 
 ## Usage
 ```
+go get github.com/Osuka42g/simple-clock-systray
+simple-clock-systray
+```
+
+Manual:
+```
 git clone https://github.com/Osuka42g/simple-clock-systray.git
 cd simple-clock-systray
 go get
